@@ -1,5 +1,5 @@
 def yes_no(question, to_check=None):
-    
+
     to_check - ["yes", "no"]
 
     valid = False

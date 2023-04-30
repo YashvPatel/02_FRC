@@ -149,7 +149,17 @@ else:
     fixed_frame = ""
 
 
+# work out total costs and profit target
+all_costs = variable_sub + fixed_sub
+profit_target = profit_goal(all_costs)
+
+# Calculate recommended price
+selling_price = 0
+
+# Write data to file
+
 # **** Printing Area ****
+
 print()
 print("**** Fun Raising - {} *****".format(product_name))
 print()
@@ -157,3 +167,12 @@ expense_print("Variable", variable_frame, variable_sub)
 
 if have_fixed == "yes":
     expense_print("Fixed", fixed_frame, fixed_sub)
+
+print()
+print("**** Profit & Sales Targets ****")
+print("Profit Target: ${:.2f}".format(profit_target))
+print("Total Sales: ${:.2f}".format(all_costs + profit_target))
+
+print()
+print("**** Recommended Selling Price:"
+      "${:.2f}".format(selling_price))
